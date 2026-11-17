@@ -1,0 +1,71 @@
+.londrina-shadow {
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+nav {
+    display: grid;
+    background-color: #e1effc;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+nav ul li a {
+    display: block;
+    color: #4D869C;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+nav ul li a:hover {
+
+    text-decoration: underline;
+    background-color: white;
+}
+
+#headerDiv {
+    width: 100%;
+    background-color: #4D869C;
+    padding: 20px 0 40px 0;
+}
+
+#logo {
+    margin: 5px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+@media screen and (max-width: 900px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    #logo {
+        width: 130px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
