@@ -1,6 +1,6 @@
 <header>
 
-    <nav>
+    <nav id="headerNav">
         <ul>
             <li><a href="/bucketlist/index.php">Startsida</a></li>
             <li><a href="/bucketlist/bucketlist.php">Bucketlist</a></li>

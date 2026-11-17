@@ -11,8 +11,63 @@ body {
     height: 100%;
 }
 
-h2 {
+#startDiv {
     text-align: center;
+}
+
+h2 {
     color: #4D869C;
     font-size: 40px;
+}
+
+#startNav {
+    display: grid;
+    padding: 0;
+    margin: 5em 0 8em 0;
+}
+
+#startNav ul {
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    justify-self: center;
+    text-align: center;
+    width: 60%;
+}
+
+#startNav ul li a {
+    background-color: #9dbebb;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+#startNav ul li a:hover {
+    text-decoration: underline;
+    background-color: #86a5a2;
+}
+
+#assignment,
+#reflection,
+#opinion {
+    width: 70%;
+    background-color: #9dbebb;
+    margin: 6em auto;
+    padding: 2em 0 2em 3em;
+    line-height: 1.5;
+}
+
+#assignment p,
+#reflection p,
+#opinion p {
+    max-width: 65ch;
+}
+
+h3 {
+    color: white;
+    font-size: 30px;
 }

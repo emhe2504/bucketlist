@@ -9,14 +9,15 @@ header {
     margin-bottom: 5em;
 }
 
-nav {
+#headerNav {
     display: grid;
     background-color: #e1effc;
     padding: 0;
     margin: 0;
 }
 
-nav ul {
+
+#headerNav ul {
     display: grid;
     padding: 0;
     margin: 0;
@@ -26,14 +27,16 @@ nav ul {
     font-weight: 600;
 }
 
-nav ul li a {
+
+#headerNav ul li a {
     display: block;
     color: #4D869C;
     text-decoration: none;
     padding: 10px 0;
 }
 
-nav ul li a:hover {
+
+#headerNav ul li a:hover {
 
     text-decoration: underline;
     background-color: white;
@@ -65,7 +68,8 @@ h1 {
         width: 130px;
     }
 
-    nav ul li a {
+
+    #headerNav ul li a {
         font-size: 14px;
     }
 }
