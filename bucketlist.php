@@ -1,3 +1,22 @@
+
+<?php
+include("includes/classes/Database.class.php");
+include("includes/classes/Bucketlist.class.php");
+
+$db = new Database();
+$bucketlist = new Bucketlist($db->getConnection());
+
+// Läs in formulär
+if (isset($_POST["name"])) {
+    $name = $_POST["name"];
+    $description = $_POST["description"];
+    $priority = $_POST["priority"];
+
+    $bucketlist->addActivity($name, $description, $priority);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="sv">
 
