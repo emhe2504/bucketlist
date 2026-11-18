@@ -56,6 +56,22 @@
         </div>
         <div id="reflection">
             <h3>Reflektioner</h3>
+            <p>Efter att ha använt PHP och sett föreläsningar om hur det fungerar har
+                jag konstaterat att det verkar som ett väldigt smart programmeringsspråk.
+                Det verkar väldigt smidigt att arbeta i PHP om man jämför arbetssätt från
+                använda programmeringsspråk. Det finns även synliga likheter, vilket gör
+                att man känner igen delar ur PHP, efter att bland annat ha använt
+                JavaScript och C#.
+            </p>
+            <p>Inbyggda funktioner som finns i PHP underlättar utvecklandet. En fördel med
+                PHP är att det är smidigt att kunna återanvända kod och data mellan olika
+                dokument för att slippa upprepningar. Du kan helt enkelt inkludera en hel
+                fil direkt i koden. Det är även smidigt att hantera och komma åt data på
+                olika ställen i koden, exempelvis när man ska hämta data som skrivits in i
+                ett formulär. På så sätt minskar mängden upprepningar. Detta kan skapa en
+                mer lättläst och strukturerad kod som är enklare att felsöka och korrigera
+                vid behov.
+            </p>
         </div>
         <div id="opinion">
             <h3>Åsikter</h3>
