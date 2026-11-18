@@ -42,7 +42,7 @@
                 att lära sig använda programmeringsspråket PHP. Webbplatsen som
                 skapas ska ha minst tre olika undersidor där varje undersida
                 ska innehålla följande:</p>
-            <ul>
+            <ul id="assigUl">
                 <li>Startsidan - information om uppgiften och mina tankar om uppgiften</li>
                 <li>Bucketlist - en bucketlist med koppling till en databas</li>
                 <li>AI-användning - hur jag använt AI i uppgiften</li>
@@ -77,6 +77,7 @@
             <h3>Åsikter</h3>
         </div>
 
+        <?php include_once("includes/footer.php"); ?>
     </div>
 </body>
 

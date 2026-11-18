@@ -51,6 +51,11 @@ h2 {
     background-color: #86a5a2;
 }
 
+#startPic {
+    width: 100%;
+    margin: 0 auto;
+}
+
 #assignment,
 #reflection,
 #opinion {
@@ -70,4 +75,61 @@ h2 {
 h3 {
     color: white;
     font-size: 30px;
+}
+
+@media screen and (max-width: 1050px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #startNav ul {
+        width: 80%;
+    }
+
+    #startNav ul li a {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #assignment,
+    #reflection,
+    #opinion {
+        width: 85%;
+        font-size: 14px;
+    }
+
+    #assigUl {
+        width: 65%;
+    }
+
+    #assignment p,
+    #reflection p,
+    #opinion p {
+        max-width: 65%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #startNav ul {
+        width: 95%;
+    }
+
+    #assignment p,
+    #reflection p,
+    #opinion p {
+        max-width: 85%;
+    }
 }

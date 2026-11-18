@@ -1,0 +1,60 @@
+footer {
+    width: 98%;
+    margin-top: 15em;
+    padding: 2% 0 2% 2%;
+    background-color: #4D869C;
+    color: #e1effc;
+}
+
+h4 {
+    font-size: 17px;
+}
+
+#fotDivOne {
+    line-height: 0.6;
+    margin-bottom: 3em;
+    color: white;
+}
+
+#secondH4 {
+    margin-bottom: 0;
+}
+
+#footerNav {
+    display: grid;
+}
+
+#footerNav ul {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    padding: 0;
+}
+
+#footerNav ul li a {
+    color: rgb(4, 53, 110);
+}
+
+#footerNav ul li a:hover {
+    color: rgb(10, 40, 73);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1050px) {
+
+    footer {
+        width: 96%;
+        padding: 2% 0 2% 4%;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    #footerNav ul {
+        width: 90%;
+        font-size: 14px;
+    }
+}

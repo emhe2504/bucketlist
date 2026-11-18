@@ -58,10 +58,10 @@ h1 {
     font-size: 50px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
 
     h1 {
-        font-size: 35px;
+        font-size: 38px;
     }
 
     #logo {
@@ -71,5 +71,16 @@ h1 {
 
     #headerNav ul li a {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    #logo {
+        width: 110px;
     }
 }
