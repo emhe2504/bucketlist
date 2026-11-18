@@ -35,19 +35,22 @@
                     <fieldset>
                         <legend>Prioritet</legend>
 
-                        <label>
+                        <label class="priority-option">
                             <input type="radio" name="priority" value="1" required>
-                            1 - Hög
+                            <span class="priority-number">1</span>
+                            <span class="priority-text">Hög</span>
                         </label>
 
-                        <label>
+                        <label class="priority-option">
                             <input type="radio" name="priority" value="2">
-                            2 - Medel
+                            <span class="priority-number">2</span>
+                            <span class="priority-text">Medel</span>
                         </label>
 
-                        <label>
+                        <label class="priority-option">
                             <input type="radio" name="priority" value="3">
-                            3 - Låg
+                            <span class="priority-number">3</span>
+                            <span class="priority-text">Låg</span>
                         </label>
                     </fieldset>
 

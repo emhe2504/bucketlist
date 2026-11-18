@@ -30,6 +30,7 @@ h2 {
     display: grid;
     padding: 0;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     list-style: none;
     justify-self: center;
     text-align: center;
@@ -37,11 +38,13 @@ h2 {
 }
 
 #startNav ul li a {
+    display: block;
     background-color: #9dbebb;
     color: white;
     font-weight: 600;
     text-decoration: none;
-    padding: 20px;
+    text-align: center;
+    padding: 15px 10px;
     border-radius: 15px;
 }
 
