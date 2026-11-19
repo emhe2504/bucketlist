@@ -1,21 +1,26 @@
-Denna webbplats har skapat som en del av Laboration 2 i kursen Dt209g.
+# Laboration 2 – Bucketlist
 
-Webbplatsen är skapad med objektorienterad PHP och databas-anslutning.
-Webbplatsen innehåller följande undersidor:
-- Startsida (information om uppgiften)
-- Bucketlist (en bucketlist där användaren kan se, lägga till och radera aktiviteter)
-- AI-användning (information om AI-användning)
+Denna webbplats har skapats som en del av Laboration 2 i kursen DT209G.
 
-Strukturen på filerna:
-- css-mapp med css-filer
-- images-mapp med bilder
-- includes-mapp med php-filer och php-class-filer
-- rotmappen med php-filer
+Webbplatsen är skapad med objektorienterad PHP och en databasanslutning till MySQL. Webbplatsen innehåller följande undersidor:
 
-Se bifogad fil för ER-diagram: (er-diagram, dt209g.pdf)
+- **Startsida:** Information om uppgiften samt reflektioner kring PHP.
+- **Bucketlist:** En bucketlist där användaren kan se, lägga till och radera aktiviteter.
+- **AI-användning:** Information om hur AI har använts under arbetet med uppgiften.
 
-Se bifogad fil för UML-diagram: (uml-diagram, dt209g.pdf)
+## Filstruktur
 
-Se bifogad fil för att se databasens innehåll och SQL-installationsscript: (bucketlist-databas.sql).
+- `css/` – CSS-filer.
+- `images/` – Bilder som används på webbplatsen.
+- `includes/` – Gemensamma PHP-filer och PHP-klasser.
+- Rotmappen – Webbplatsens huvudsakliga PHP-filer.
 
-/Emma
+## Dokumentation
+
+- ER-diagram: [ER-diagram](ER-DIAGRAMETS-FILNAMN.pdf)
+- UML-diagram: [UML-diagram](UML-DIAGRAMMETS-FILNAMN.pdf)
+- Databas och SQL-installationsskript: [SQL-fil](SQL-FILENS-FILNAMN.sql)
+
+## Publicerad webbplats
+
+Länk till den publicerade webbplatsen: *Läggs till efter publicering*
