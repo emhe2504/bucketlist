@@ -22,6 +22,14 @@ h3 {
     font-size: 22px;
 }
 
+#error-list {
+    color: red;
+}
+
+#success {
+    color: green;
+}
+
 label {
     display: block;
     font-weight: 600;
@@ -118,6 +126,18 @@ button[type="submit"]:hover {
     background-color: #e1effc;
 }
 
+.activity {
+    width: 65%;
+    padding: 8px;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.activity h4 {
+    color: #4D869C;
+}
+
 @media screen and (max-width: 1050px) {
 
     main {
@@ -134,6 +154,10 @@ button[type="submit"]:hover {
 
     h3 {
         font-size: 20px;
+    }
+
+    #error-list {
+        font-size: 14px;
     }
 
     input[type="text"],

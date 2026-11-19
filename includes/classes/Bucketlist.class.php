@@ -30,4 +30,12 @@ class Bucketlist
 
         return $stmt->execute();
     }
+
+    public function getActivities() : array {
+
+        $sql = "SELECT * from bucketlist ORDER BY priority ASC;";
+        $result = $this->db->query($sql);
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }

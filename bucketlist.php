@@ -1,20 +1,65 @@
 
 <?php
+
+// Inkludera filerna
 include("includes/classes/Database.class.php");
 include("includes/classes/Bucketlist.class.php");
 
+// Skapa instanser
 $db = new Database();
 $bucketlist = new Bucketlist($db->getConnection());
 
-// Läs in formulär
-if (isset($_POST["name"])) {
-    $name = $_POST["name"];
-    $description = $_POST["description"];
-    $priority = $_POST["priority"];
+// För meddelanden (fel/success)
+$errors = [];
+$success = "";
 
-    $bucketlist->addActivity($name, $description, $priority);
+// Kontrollera om användaren skickats tillbaka efter en lyckad registrering
+if (isset($_GET["success"])) {
+    $success = "Aktiviteten har lagts till!";
 }
+
+// Läs in formulär
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = trim($_POST["name"] ?? "");
+    $description = trim($_POST["description"] ?? "");
+    $priority = $_POST["priority"] ?? "";
+
+    // Kontrollera namn
+    if (empty($name)) {
+        $errors["name"] = "Du måste ange ett namn.";
+    }
+
+    // Kontrollera beskrivning
+    if (empty($description)) {
+        $errors["description"] = "Du måste ange en beskrivning.";
+    }
+
+    // Kontrollera prioritet
+    if (!in_array($priority, ["1", "2", "3"], true)) {
+        $errors["priority"] = "Du måste välja en giltig prioritet.";
+    }
+
+    // Spara endast om det inte finns några fel
+    if (empty($errors)) {
+
+        if ($bucketlist->addActivity($name, $description, (int)$priority)) {
+
+            // Skicka vidare användaren efter lyckad registrering
+            header("Location: bucketlist.php?success=1");
+            exit;
+
+        } else {
+            $errors["database"] = "Det gick inte att spara aktiviteten.";
+        }
+    }
+}
+
+// Hämta aktiviteter från databasen
+$activities = $bucketlist->getActivities();
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -44,6 +89,24 @@ if (isset($_POST["name"])) {
 
             <section id="add-activity">
                 <h3>Lägg till aktivitet</h3>
+
+                <!-- Skapar lista med errors i error-array -->
+                <?php if (!empty($errors)): ?>
+                    <ul id="error-list">
+                        <?php foreach ($errors as $error): ?>
+                            <li><?php echo htmlspecialchars($error); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+
+                <!-- Skriver ut success-meddelande om formuläret skickas -->
+                <?php if ($success != ""): ?>
+                    <p id="success">
+                        <?php echo htmlspecialchars($success); ?>
+                    </p>
+                <?php endif; ?>
+
+
                 <form action="bucketlist.php" method="POST">
                     <label for="name">Namn</label>
                     <input type="text" id="name" name="name" required placeholder="Exempelvis: Resa till Japan">
@@ -79,6 +142,27 @@ if (isset($_POST["name"])) {
 
             <section id="activity-list">
                 <h3>Mina aktiviteter</h3>
+
+                <?php if (!empty($activities)): ?>
+
+                    <?php foreach ($activities as $activity): ?>
+
+                        <div class="activity">
+                            <h4><?php echo htmlspecialchars($activity["name"]); ?></h4>
+
+                            <p><?php echo htmlspecialchars($activity["description"]); ?></p>
+
+                            <p>Prioritet: <?php echo htmlspecialchars((string)$activity["priority"]); ?></p>
+                        </div>
+
+                    <?php endforeach; ?>
+
+                <?php else: ?>
+
+                    <p>Du har inte lagt till några aktiviteter ännu.</p>
+
+                <?php endif; ?>
+
             </section>
 
         </main>
