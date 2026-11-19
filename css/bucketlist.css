@@ -30,6 +30,10 @@ h3 {
     color: green;
 }
 
+form {
+    margin-top: 4%;
+}
+
 label {
     display: block;
     font-weight: 600;
@@ -115,15 +119,17 @@ button[type="submit"] {
     display: block;
     width: 95%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4D869C;
+    font-weight: 600;
     margin-top: 2%;
     padding: 1%;
-    border: 1px solid #ccc;
+    border: 2px solid #4D869C;
     border-radius: 10px;
     background-color: white;
 }
 
 button[type="submit"]:hover {
-    background-color: #e1effc;
+    background-color: #e8f1fa;
 }
 
 .activity {
@@ -156,7 +162,8 @@ button[type="submit"]:hover {
         font-size: 20px;
     }
 
-    #error-list {
+    #error-list,
+    #success {
         font-size: 14px;
     }
 
@@ -176,6 +183,10 @@ button[type="submit"]:hover {
         font-size: 16px;
     }
 
+    .activity {
+        width: 85%;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -184,5 +195,9 @@ button[type="submit"]:hover {
     #activity-list {
         margin-top: 10%;
 
+    }
+
+    .activity {
+        width: 90%;
     }
 }

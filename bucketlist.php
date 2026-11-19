@@ -185,6 +185,14 @@ $activities = $bucketlist->getActivities();
                             <p><?php echo htmlspecialchars($activity["description"]); ?></p>
 
                             <p>Prioritet: <?php echo htmlspecialchars((string)$activity["priority"]); ?></p>
+
+                            <p>Tillagd: <?php echo htmlspecialchars(date("d-m-Y", strtotime($activity["created_at"]))); ?></p>
+
+                            <form action="bucketlist.php" method="POST">
+                                <button type="submit" name="delete_id"
+                                    value="<?php echo (int)$activity["id"]; ?>">Radera aktivitet</button>
+                            </form>
+
                         </div>
 
                     <?php endforeach; ?>

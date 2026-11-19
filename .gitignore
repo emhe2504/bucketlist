@@ -1,9 +1,5 @@
 
-# Lokala miljö- och konfigurationsfiler
-.env
-.env.*
-
-# Databasuppgifter och lokala inställningar
+# Lokala databasuppgifter
 config.local.php
 
 # Operativsystem
