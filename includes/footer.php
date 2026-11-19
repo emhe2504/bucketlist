@@ -4,6 +4,7 @@
     <div id="fotDivOne">
         <p>Bucketlist</p>
         <p>&#xa9; Skapad av Emma Heikkinen för Laboration 2, Dt209g</p>
+        <p>Bilder: Pexels</p>
     </div>
 
     <div id="fotDivTwo">

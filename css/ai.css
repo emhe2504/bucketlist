@@ -1,0 +1,93 @@
+#aiDiv {
+    width: 80%;
+    text-align: center;
+    margin: 5% auto;
+}
+
+h2 {
+    color: #4D869C;
+    font-size: 40px;
+}
+
+#aiPic {
+    width: 100%;
+    margin: 2% auto 5%;
+}
+
+#usage,
+#conclusions {
+    width: 70%;
+    background-color: #9dbebb;
+    margin: 2% auto 4%;
+    padding: 2em 0 2em 3em;
+    line-height: 1.5;
+}
+
+#usage p,
+#conclusions p,
+#ai-ul,
+#usage-ul,
+#concl-ul {
+    max-width: 65ch;
+}
+
+h3 {
+    color: white;
+    font-size: 30px;
+}
+
+
+@media screen and (max-width: 1050px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #usage,
+    #conclusions {
+        width: 85%;
+        font-size: 14px;
+    }
+
+    #ai-ul,
+    #usage-ul,
+    #concl-ul {
+        width: 65%;
+    }
+
+    #usage p,
+    #conclusions p {
+        max-width: 65%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #aiDiv {
+        margin: 5% auto 7%;
+    }
+
+    #usage p,
+    #conclusions p {
+        max-width: 80%;
+    }
+
+    #ai-ul,
+    #usage-ul,
+    #concl-ul {
+        width: 80%;
+        padding: 0;
+    }
+
+    #aiPic {
+        margin: 6% auto 8%;
+    }
+}
