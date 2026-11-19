@@ -12,7 +12,10 @@ Strukturen på filerna:
 - includes-mapp med php-filer och php-class-filer
 - rotmappen med php-filer
 
-Se bifogade filer för ER-diagram (em-diagram.pdf) samt UML-diagram (uml-diagram.pdf).
-Se bifogad fil för att se databasens innehåll och SQL-installationsscript (bucketlist-databas.sql).
+Se bifogad fil för ER-diagram: (em-diagram, dt209g.pdf)
+
+Se bifogad fil för UML-diagram: (uml-diagram, dt209g.pdf)
+
+Se bifogad fil för att se databasens innehåll och SQL-installationsscript: (bucketlist-databas.sql).
 
 /Emma
