@@ -17,9 +17,9 @@ Webbplatsen är skapad med objektorienterad PHP och en databasanslutning till My
 
 ## Dokumentation
 
-- ER-diagram: [ER-diagram](ER-DIAGRAMETS-FILNAMN.pdf)
-- UML-diagram: [UML-diagram](UML-DIAGRAMMETS-FILNAMN.pdf)
-- Databas och SQL-installationsskript: [SQL-fil](SQL-FILENS-FILNAMN.sql)
+- ER-diagram: (er-diagram, dt209g.pdf)
+- UML-diagram: (uml-diagram, dt209g.pdf)
+- Databas och SQL-installationsskript: (bucketlist - databas.sql)
 
 ## Publicerad webbplats
 
