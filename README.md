@@ -12,7 +12,7 @@ Strukturen på filerna:
 - includes-mapp med php-filer och php-class-filer
 - rotmappen med php-filer
 
-Se bifogad fil för ER-diagram: (em-diagram, dt209g.pdf)
+Se bifogad fil för ER-diagram: (er-diagram, dt209g.pdf)
 
 Se bifogad fil för UML-diagram: (uml-diagram, dt209g.pdf)
 
