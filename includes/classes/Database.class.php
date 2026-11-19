@@ -6,7 +6,7 @@ class Database
     private $db;
 
     //Konstruktor
-    function __construct()
+    public function __construct()
     {
 
         //Hämta fil med uppgifter

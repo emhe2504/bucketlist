@@ -175,6 +175,7 @@ $activities = $bucketlist->getActivities();
             <section id="activity-list">
                 <h3>Mina aktiviteter</h3>
 
+                <!-- Skriva ut varje aktivitet som article -->
                 <?php if (!empty($activities)): ?>
 
                     <?php foreach ($activities as $activity): ?>
