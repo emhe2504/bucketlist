@@ -1,56 +1,88 @@
-
 <?php
 
-// Inkludera filerna
+// Inkludera klassfilerna
 include("includes/classes/Database.class.php");
 include("includes/classes/Bucketlist.class.php");
 
-// Skapa instanser
+// Skapa objekt - instanser av klasser
 $db = new Database();
 $bucketlist = new Bucketlist($db->getConnection());
 
-// För meddelanden (fel/success)
+// Variabler för meddelanden (fel/success)
 $errors = [];
 $success = "";
 
-// Kontrollera om användaren skickats tillbaka efter en lyckad registrering
+
+// Kontrollera om användaren skickats tillbaka efter en lyckad åtgärd:
+
+//Finns success i adressen
 if (isset($_GET["success"])) {
-    $success = "Aktiviteten har lagts till!";
+    $success = "Aktiviteten har lagts till!";   //Spara meddelande
 }
 
-// Läs in formulär
+//Finns deleted i adressen
+if (isset($_GET["deleted"])) {
+    $success = "Aktiviteten har raderats!";     //Spara meddelande
+}
+
+
+
+// Läs in formulär - har användaren skickat formuläret?
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = trim($_POST["name"] ?? "");
-    $description = trim($_POST["description"] ?? "");
-    $priority = $_POST["priority"] ?? "";
 
-    // Kontrollera namn
-    if (empty($name)) {
-        $errors["name"] = "Du måste ange ett namn.";
-    }
+    // Kontrollera om användaren vill radera en aktivitet
+    if (isset($_POST["delete_id"])) {
 
-    // Kontrollera beskrivning
-    if (empty($description)) {
-        $errors["description"] = "Du måste ange en beskrivning.";
-    }
+        //Hämta id som skickats med formulär, omvlandla till heltal
+        $id = intval($_POST["delete_id"]);
 
-    // Kontrollera prioritet
-    if (!in_array($priority, ["1", "2", "3"], true)) {
-        $errors["priority"] = "Du måste välja en giltig prioritet.";
-    }
-
-    // Spara endast om det inte finns några fel
-    if (empty($errors)) {
-
-        if ($bucketlist->addActivity($name, $description, (int)$priority)) {
-
-            // Skicka vidare användaren efter lyckad registrering
-            header("Location: bucketlist.php?success=1");
+        //Om raderingen lyckas
+        if ($bucketlist->deleteActivity($id)) {
+            header("Location: bucketlist.php?deleted=1");   //Skickas tillbaka och visa raderad
             exit;
-
         } else {
-            $errors["database"] = "Det gick inte att spara aktiviteten.";
+            $errors["database"] = "Det gick inte att radera aktiviteten.";  //Error-meddelande 
+        }
+    }
+
+
+    // Kontrollera om användaren vill lägga till aktivitet
+    if (isset($_POST["name"])) {
+
+        // Hämta värden från formulär
+        // Använd tom sträng om det saknas och ta bort onödiga mellanslag
+        $name = trim($_POST["name"] ?? "");
+        $description = trim($_POST["description"] ?? "");
+        $priority = $_POST["priority"] ?? "";
+
+        // Kontrollera namn
+        if (empty($name)) {
+            $errors["name"] = "Du måste ange ett namn.";
+        }
+
+        // Kontrollera beskrivning
+        if (empty($description)) {
+            $errors["description"] = "Du måste ange en beskrivning.";
+        }
+
+        // Kontrollera prioritet
+        if (!in_array($priority, ["1", "2", "3"], true)) {
+            $errors["priority"] = "Du måste välja en giltig prioritet.";
+        }
+
+        // Spara endast om det inte finns några fel
+        if (empty($errors)) {
+
+            //Om aktiviteten sparas i databas
+            if ($bucketlist->addActivity($name, $description, (int)$priority)) {
+
+                // Skicka vidare användaren efter lyckad registrering
+                header("Location: bucketlist.php?success=1");
+                exit;
+            } else {
+                $errors["database"] = "Det gick inte att spara aktiviteten."; //Error-meddelande 
+            }
         }
     }
 }

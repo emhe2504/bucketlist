@@ -5,6 +5,7 @@ class Database
 
     private $db;
 
+    //Konstruktor
     function __construct()
     {
         $this->db = new mysqli("localhost", "bucketlist", "password", "bucketlist");
@@ -14,7 +15,7 @@ class Database
         }
     }
 
-
+    //Koppla till databas
     public function getConnection()
     {
         return $this->db;
