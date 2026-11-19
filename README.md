@@ -23,4 +23,5 @@ Webbplatsen är skapad med objektorienterad PHP och en databasanslutning till My
 
 ## Publicerad webbplats
 
-Länk till den publicerade webbplatsen: *Läggs till efter publicering*
+Länk till den publicerade webbplatsen: https://studenter.miun.se/~emhe2504/bucketlist/
+
