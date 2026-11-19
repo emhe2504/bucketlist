@@ -77,6 +77,24 @@
             </div>
             <div id="opinion">
                 <h3>Åsikter</h3>
+                <p>Jag har nu använt mig av PHP i arbetet och kommit en bit på vägen. Hittills
+                    tycker jag mycket om att använda PHP. Jag har bara använt det en liten stund,
+                    men jag kan absolut se fördelarna! Det är ett väldigt smidigt språk att
+                    använda då man kan inkludera filer direkt i en annan fil och på så sätt nå
+                    variabler, klasser och så vidare.
+                </p>
+                <p>Det är absolut en fördel att vi tidigare har programmerat i JavaScript,
+                    Typescript och C# för det har skapat förkunskaper hos en som gjort att
+                    det är lättare att förstå PHP.
+                </p>
+                <p>Detta är bara första uppgiften i den här kursen, så svårighetsgraden kommer
+                    med största sannolikhet öka, men hittills har jag tyckt mycket om att
+                    programmera i PHP. Jag tycker även att det har varit roligt att man har fått
+                    möjlighet att inkludera AI i uppgiften. Det snabbar på utvecklingen och kan
+                    verkligen hjälpa till om man fastnat. Jag tycker dock att det är viktigt att
+                    endast ha det som ett hjälpmedel och vara nog med att man förstår vad man gör.
+                    Sammantaget så har jag tyckt att detta varit en rolig uppgift.
+                </p>
             </div>
         </main>
 
